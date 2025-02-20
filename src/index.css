@@ -1,0 +1,21 @@
+body {
+  background-color: rgb(233, 233, 233);
+}
+
+#titulo {
+  text-align: center;
+}
+
+#conteinerNav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+
+#navegacion {
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+  padding: 10px;
+}
