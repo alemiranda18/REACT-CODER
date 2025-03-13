@@ -19,3 +19,24 @@ body {
   gap: 30px;
   padding: 10px;
 }
+
+.itemProductos {
+  padding: 1rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 1rem;
+
+}
+
+.itemProductosIndivuales {
+  align-self: start;
+  background-color: rgb(248, 222, 222);
+  min-height: 300px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+}
+
+.imgProducto {
+  width: 100%;
+}

@@ -1,10 +1,12 @@
-import React from 'react'
+import { useContext } from "react";
+import { NavLink } from "react-router-dom";
 
-export const Cartwidget = () => {
+const CartWidget = () => {
   return (
-    <div id="iconRedes">
-        <a href="#"><img src="/public/carrito.png" alt="carrito de compras" /></a>
-       <span>1</span>
-    </div>
-  )
-}
+    <NavLink to="/carrito">
+      <img src="/carrito.png" alt="Icono de carrito" />
+    </NavLink>
+  );
+};
+
+export default CartWidget;
