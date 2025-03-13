@@ -5,15 +5,25 @@ import CartWidget from "./components/Cartwidget";
 export const Header = () => {
   return (
     <header>
-      <h1 id="titulo"> VILLA CARRIZAL</h1>
-      <div id="conteinerNav">
-        <nav id="navegacion">
-          <NavLink to="/">Inicio</NavLink>
-          <NavLink to="/components/Nosotros">Nosotros</NavLink>
-          <NavLink to="/components/Pozos">Pozos</NavLink>
-        </nav>
-        <CartWidget />
-      </div>
+      <nav id="conteinerNav">
+        <div>
+          <h1>
+            <NavLink to="/">
+              <img
+                src="/Carrizal-Logo.png"
+                alt="logo de carrizal"
+                className="imgCarrizal"
+              />
+            </NavLink>
+          </h1>
+        </div>
+        <div id="navegacion">
+          <NavLink to="/components/Futbol">Futbol</NavLink>
+          <NavLink to="/components/Basquet">Basquet</NavLink>
+          <NavLink to="/components/Voley">Voley</NavLink>
+          <CartWidget />
+        </div>
+      </nav>
     </header>
   );
 };

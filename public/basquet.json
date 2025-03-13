@@ -1,0 +1,32 @@
+[
+    {
+        "id": 6,
+        "Precio": "$300",
+        "Producto": "Basquet",
+        "imgProducto": "https://i.pinimg.com/originals/65/55/23/655523db71593b80d5dfccafdfd86b80.jpg"
+      },
+      {
+        "id": 7,
+        "Precio": "$300",
+        "Producto": "Basquet",
+        "imgProducto": "https://i.pinimg.com/originals/65/55/23/655523db71593b80d5dfccafdfd86b80.jpg"
+      },
+      {
+        "id": 8,
+        "Precio": "$200",
+        "Producto": "Basquet",
+        "imgProducto": "https://i.pinimg.com/originals/65/55/23/655523db71593b80d5dfccafdfd86b80.jpg"
+      },
+      {
+        "id": 9,
+        "Precio": "$200",
+        "Producto": "Basquet",
+        "imgProducto": "https://i.pinimg.com/originals/65/55/23/655523db71593b80d5dfccafdfd86b80.jpg"
+      },
+      {
+        "id": 10,
+        "Precio": "$300",
+        "Producto": "Basquet",
+        "imgProducto": "https://i.pinimg.com/originals/65/55/23/655523db71593b80d5dfccafdfd86b80.jpg"
+      }
+]

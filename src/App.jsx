@@ -2,19 +2,21 @@ import React from "react";
 import { Header } from "./Header";
 import { ItemListConteiner } from "./components/ItemListConteiner";
 import { Routes, Route } from "react-router-dom";
-import Nosotros from "./components/nosotros";
-import Pozos from "./components/pozos";
+import Futbol from "./components/Futbol";
+import Basquet from "./components/Basquet";
+import Voley from "./components/Voley";
+import CartWidget from "./components/Cartwidget";
 
 export default () => {
   return (
     <>
       <Header />
       <Routes>
-        <Route
-          path="/"
-          element={<ItemListConteiner nombre="Alejandro" />}></Route>
-        <Route path="/components/nosotros" element={<Nosotros />}></Route>
-        <Route path="/components/pozos" element={<Pozos />}></Route>
+        <Route path="/" element={<ItemListConteiner />}></Route>
+        <Route path="/components/:id" element={<Futbol />}></Route>
+        <Route path="/components/Basquet" element={<Basquet />}></Route>
+        <Route path="/components/Voley" element={<Voley />}></Route>
+        <Route path="/components/CartWidget" element={<CartWidget />}></Route>
       </Routes>
     </>
   );

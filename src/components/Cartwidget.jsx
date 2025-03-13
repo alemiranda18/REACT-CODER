@@ -3,9 +3,13 @@ import { NavLink } from "react-router-dom";
 
 const CartWidget = () => {
   return (
-    <NavLink to="/carrito">
-      <img src="/carrito.png" alt="Icono de carrito" />
-    </NavLink>
+    <div>
+      {" "}
+      <span>carrito</span>
+      <NavLink to="/carrito">
+        <img src="/carrito.png" alt="Icono de carrito" />
+      </NavLink>
+    </div>
   );
 };
 
