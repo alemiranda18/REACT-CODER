@@ -4,6 +4,9 @@ import { NavLink, useParams } from "react-router-dom";
 export const ItemListConteiner = () => {
   const [resultado, setResultado] = useState([]);
   const params = useParams();
+  console.log(params)
+  
+  
   useEffect(() => {
     fetch(params.id === undefined ? "/productos.json" : `/${params.id}.json`)
       .then((res) => {

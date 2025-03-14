@@ -13,9 +13,7 @@ export default () => {
       <Header />
       <Routes>
         <Route path="/" element={<ItemListConteiner />}></Route>
-        <Route path="/components/:id" element={<Futbol />}></Route>
-        <Route path="/components/Basquet" element={<Basquet />}></Route>
-        <Route path="/components/Voley" element={<Voley />}></Route>
+        <Route path="/components/:id" element={<ItemListConteiner />}></Route>
         <Route path="/components/CartWidget" element={<CartWidget />}></Route>
       </Routes>
     </>
