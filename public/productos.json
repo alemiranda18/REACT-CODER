@@ -58,7 +58,8 @@
     "Precio": "$300",
     "Producto": "Basquet",
     "imgProducto": "https://i.pinimg.com/originals/65/55/23/655523db71593b80d5dfccafdfd86b80.jpg"
-  },{
+  },
+  {
     "id": 11,
     "Precio": "$100",
     "Producto": "Voley",

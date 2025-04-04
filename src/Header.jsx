@@ -1,6 +1,6 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
-import CartWidget from "./components/Cartwidget";
+import {CartWidget} from "react"
 
 export const Header = () => {
   return (
@@ -8,7 +8,7 @@ export const Header = () => {
       <nav id="conteinerNav">
         <div>
           <h1>
-            <NavLink to="/">
+            <NavLink to="/components/CarritoItem">
               <img
                 src="/Carrizal-Logo.png"
                 alt="logo de carrizal"

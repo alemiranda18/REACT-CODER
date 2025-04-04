@@ -1,12 +1,13 @@
-import { useContext } from "react";
-import { NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
+import {CarritoItem} from ".CarritoItem";
 
 const CartWidget = () => {
   return (
     <div>
-      <NavLink to="/carrito">
-        <img src="/carrito.png" alt="Icono de carrito" />
-      </NavLink>
+      <Link to="/CarritoItem">
+      <img src="carrito.png" alt="Icono de carrito"/>
+      </Link>
+      <CarritoItem />
     </div>
   );
 };

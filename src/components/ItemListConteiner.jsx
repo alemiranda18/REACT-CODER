@@ -4,7 +4,6 @@ import { NavLink, useParams } from "react-router-dom";
 export const ItemListConteiner = () => {
   const [resultado, setResultado] = useState([]);
   const params = useParams();
-  console.log(params)
   
   
   useEffect(() => {
@@ -29,7 +28,7 @@ export const ItemListConteiner = () => {
               className="imgProducto"
             />
             <h4>{producto.Precio}</h4>
-            <NavLink to="./itemLink" className="itemLink">
+            <NavLink to={`/producto/${producto.id}`} className="itemLinkProductos">
               DETALLES
             </NavLink>
           </article>
