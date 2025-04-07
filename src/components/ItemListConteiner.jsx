@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from "react";
-import { NavLink, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
+import ItemProductos from "./ItemProductos";
 
 export const ItemListConteiner = () => {
   const [resultado, setResultado] = useState([]);
   const params = useParams();
-  
   
   useEffect(() => {
     fetch(params.id === undefined ? "/productos.json" : `/${params.id}.json`)
@@ -20,19 +20,11 @@ export const ItemListConteiner = () => {
     <div className="itemProductos">
       {resultado.map((producto) => {
         return (
-          <article className="itemProductosIndivuales">
-            <h3>{producto.Producto}</h3>
-            <img
-              src={producto.imgProducto}
-              alt="imagen del producto"
-              className="imgProducto"
-            />
-            <h4>{producto.Precio}</h4>
-            <NavLink to={`/producto/${producto.id}`} className="itemLinkProductos">
-              DETALLES
-            </NavLink>
-          </article>
-        );
+        <ItemProductos
+        key={producto.id}
+          producto={producto}
+          />
+        )
       })}
     </div>
   );

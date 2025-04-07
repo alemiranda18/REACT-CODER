@@ -1,6 +1,7 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
-import {CartWidget} from "react"
+import  Cart from "./components/Cart"
+
 
 export const Header = () => {
   return (
@@ -8,22 +9,22 @@ export const Header = () => {
       <nav id="conteinerNav">
         <div>
           <h1>
-            <NavLink to="/components/CarritoItem">
+          <NavLink to="/">
               <img
                 src="/Carrizal-Logo.png"
                 alt="logo de carrizal"
                 className="imgCarrizal"
               />
-            </NavLink>
+            </NavLink>           
           </h1>
         </div>
         <div id="navegacion">
-          <NavLink to="/components/Futbol">Futbol</NavLink>
-          <NavLink to="/components/Basquet">Basquet</NavLink>
-          <NavLink to="/components/Voley">Voley</NavLink>
-          <CartWidget />
-        </div>
+           <NavLink to="/components/Hombres">Hombres</NavLink>
+          <NavLink to="/components/Mujeres">Mujeres</NavLink>
+          <NavLink to="/components/Accesorios">Accesorios</NavLink>
+           <Cart /> 
+      </div>
       </nav>
     </header>
-  );
+  )
 };
