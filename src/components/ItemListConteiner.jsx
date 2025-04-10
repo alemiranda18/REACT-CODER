@@ -2,9 +2,12 @@ import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import ItemProductos from "./ItemProductos";
 
+
 export const ItemListConteiner = () => {
   const [resultado, setResultado] = useState([]);
   const params = useParams();
+
+  
   
   useEffect(() => {
     fetch(params.id === undefined ? "/productos.json" : `/${params.id}.json`)
