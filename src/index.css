@@ -37,15 +37,31 @@ body {
 }
 
 .itemProductosIndivuales {
-  align-self: start;
-  background-color: rgb(248, 222, 222);
+  background-color: rgb(250, 193, 193);
   width: 210px;
   height: 500px;
   display: flex;
   flex-direction: column;
+  text-align: center;
   border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s;
+  justify-content: space-evenly;
 }
 
 .imgProducto {
   width: 100%;
+}
+
+.itemLinkIndivuales {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.imgProdIndividual {
+  width: 400px;
+  height: 500px;
 }
