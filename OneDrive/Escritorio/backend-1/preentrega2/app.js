@@ -2,7 +2,7 @@ import express from 'express'
 import handlebars from 'express-handlebars'
 import { Server } from 'socket.io'
 import realTimeProducts from './src/routes/realTimeProducts.js'
-import routerHome from './src/routes/home.js'
+import routerHome from './public/home.js'
 
 
 
@@ -13,6 +13,8 @@ const httpServer = app.listen(PORT, () => {
 })
 const io = new Server(httpServer)
 
+
+app.use(express.urlencoded({ extended: true }));
 app.engine('handlebars', handlebars.engine())
 app.set('view engine', 'handlebars')
 app.set('views', './views')
@@ -27,15 +29,20 @@ const productos = [
     { nombre: "Monitor 24 pulgadas", precio: 38500 },
     { nombre: "Webcam HD", precio: 6100 }
 ]
+let nuevoProdAgregado = []
 
 io.on('connection', (socket) => {
+
+    //
     socket.emit('productos', productos)
 
+    // recibo el valor del form,guardo el producto en array y envio el array actualizado
     socket.on('msg', (nombre, precio) => {
         const nuevoProd = { nombre, precio }
         productos.push(nuevoProd)
         io.emit('productos', productos)
     })
+    //encuentro el producto lo elimino y  envio el array actualizado
     socket.on('eliminarProducto', (nombre) => {
         const index = productos.findIndex(p => p.nombre.toLowerCase().trim() === nombre.toLowerCase().trim())
         if (index !== -1) {
@@ -43,5 +50,14 @@ io.on('connection', (socket) => {
             io.emit('productos', productos);
         }
     });
+    //recibo el producto agregado  lo guardo en un array y lo reenvio.
+    socket.on('prodAgregado', (nombre, precio) => {
+        const prodAgregado = { nombre, precio }
+        nuevoProdAgregado.push(prodAgregado)
+        socket.emit('nuevoProducto', nuevoProdAgregado)
+        console.log(nuevoProdAgregado)
+    })
 
 })
+
+export { io }

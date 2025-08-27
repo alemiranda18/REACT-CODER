@@ -1,0 +1,30 @@
+<section>
+  <h1>Productos</h1>
+
+  {{#if productos.length}}
+  <ul id="lista-productos">
+    {{#each productos}}
+    <li><strong>{{this.nombre}}</strong> — $ {{this.precio}}</li>
+    {{/each}}
+  </ul>
+  {{else}}
+  <p id="sin-productos">Todavía no hay productos.</p>
+  <ul id="lista-productos" hidden></ul>
+  {{/if}}
+
+  <hr />
+
+  <form id="form-producto">
+    <label>
+      Nombre:
+      <input type="text" name="nombre" required />
+    </label>
+    <label>
+      Precio:
+      <input type="number" name="precio" step="0.01" required />
+    </label>
+    <button type="submit">Agregar</button>
+  </form>
+
+  <p><a href="/productos">Ver productos agregados</a></p>
+</section>

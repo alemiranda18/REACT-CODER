@@ -1,0 +1,16 @@
+<section>
+  <h1>Lista de productos</h1>
+
+  {{#if productos.length}}
+  <ul id="lista-productos">
+    {{#each productos}}
+    <li><strong>{{this.nombre}}</strong> — $ {{this.precio}}</li>
+    {{/each}}
+  </ul>
+  {{else}}
+  <p id="sin-productos">Todavía no se agregaron productos.</p>
+  <ul id="lista-productos" hidden></ul>
+  {{/if}}
+
+  <p><a href="/">Volver al formulario</a></p>
+</section>
